@@ -1,4 +1,4 @@
-package jp.coppermine.samples.metrics.meter;
+package jp.coppermine.examples.metrics.meter;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;

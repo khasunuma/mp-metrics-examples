@@ -1,4 +1,4 @@
-package jp.coppermine.samples.metrics.counter;
+package jp.coppermine.examples.metrics.counter;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.ws.rs.GET;
