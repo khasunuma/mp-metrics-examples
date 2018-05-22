@@ -1,4 +1,4 @@
-package jp.coppermine.examples.metrics.scope;
+package jp.coppermine.example.metrics.scope;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.ws.rs.GET;

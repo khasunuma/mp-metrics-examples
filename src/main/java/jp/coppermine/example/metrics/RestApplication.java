@@ -1,4 +1,4 @@
-package jp.coppermine.examples.metrics;
+package jp.coppermine.example.metrics;
 
 import javax.ws.rs.ApplicationPath;
 import javax.ws.rs.core.Application;

@@ -1,4 +1,4 @@
-package jp.coppermine.examples.metrics.histogram;
+package jp.coppermine.example.metrics.histogram;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;

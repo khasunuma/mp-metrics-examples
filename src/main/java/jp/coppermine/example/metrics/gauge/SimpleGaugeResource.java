@@ -1,4 +1,4 @@
-package jp.coppermine.examples.metrics.gauge;
+package jp.coppermine.example.metrics.gauge;
 
 import javax.enterprise.context.RequestScoped;
 import javax.ws.rs.GET;
