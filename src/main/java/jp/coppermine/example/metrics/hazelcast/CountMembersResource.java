@@ -1,6 +1,6 @@
 package jp.coppermine.example.metrics.hazelcast;
 
-import javax.enterprise.context.RequestScoped;
+import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
@@ -10,7 +10,7 @@ import org.eclipse.microprofile.metrics.annotation.Gauge;
 import com.hazelcast.core.HazelcastInstance;
 
 @Path("hazelcast/members")
-@RequestScoped
+@ApplicationScoped
 public class CountMembersResource {
     
     @Inject

@@ -1,6 +1,8 @@
 package jp.coppermine.example.metrics.idolmaster;
 
 import static java.util.stream.Collectors.joining;
+import static javax.ws.rs.core.MediaType.APPLICATION_JSON;
+import static javax.ws.rs.core.MediaType.APPLICATION_XML;
 
 import java.util.List;
 
@@ -13,7 +15,7 @@ import javax.ws.rs.Path;
 import org.eclipse.microprofile.metrics.Histogram;
 import org.eclipse.microprofile.metrics.annotation.Metric;
 
-@Path("cg-stage/score")
+@Path("imas-cg/score")
 @ApplicationScoped
 public class CinderellaStageScoreResource {
     
@@ -27,7 +29,7 @@ public class CinderellaStageScoreResource {
     
     @POST
     @Path("input")
-    @Consumes({"application/xml", "application/json"})
+    @Consumes({APPLICATION_XML, APPLICATION_JSON})
     public String input(ScoreSheet scoreSheet) {
         combo.update(scoreSheet.getCombo());
         score.update(scoreSheet.getScore());
@@ -36,7 +38,7 @@ public class CinderellaStageScoreResource {
     
     @POST
     @Path("import")
-    @Consumes({"application/xml", "application/json"})
+    @Consumes({APPLICATION_XML, APPLICATION_JSON})
     public String importFromXml(List<ScoreSheet> scoreSheets) {
         scoreSheets.forEach(this::input);
         return scoreSheets.stream().map(e -> e.toString()).collect(joining("\n"));
