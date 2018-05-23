@@ -6,7 +6,7 @@ import javax.ws.rs.Path;
 
 import org.eclipse.microprofile.metrics.annotation.Counted;
 
-@Path("call-counter")
+@Path("call")
 @ApplicationScoped
 public class CallCounterResource {
     

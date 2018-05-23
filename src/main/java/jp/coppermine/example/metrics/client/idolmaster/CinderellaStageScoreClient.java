@@ -12,8 +12,8 @@ import javax.ws.rs.client.ClientBuilder;
 import javax.ws.rs.client.Entity;
 import javax.ws.rs.core.MediaType;
 
-@Path("client/imas-cg")
-public class CinderellaStageScoreClientResource {
+@Path("imas-cg")
+public class CinderellaStageScoreClient {
     
     private static final URI CONTEXT_ROOT = URI.create("http://localhost:8080/metrics-as-toys");
     private static final URI APPLICATION_METRICS = URI.create("http://localhost:8080/metrics/application");

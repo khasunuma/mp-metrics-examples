@@ -10,9 +10,9 @@ import javax.ws.rs.Path;
 import javax.ws.rs.client.Client;
 import javax.ws.rs.client.ClientBuilder;
 
-@Path("client/counter")
+@Path("counter")
 @RequestScoped
-public class SimpleCounterClientResource {
+public class SimpleCounterClient {
     
     private static final URI CONTEXT_ROOT = URI.create("http://localhost:8080/metrics-as-toys");
     private static final URI APPLICATION_METRICS = URI.create("http://localhost:8080/metrics/application");

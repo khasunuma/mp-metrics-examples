@@ -62,7 +62,7 @@ public class ScoreSheet implements Serializable {
 
     @Override
     public String toString() {
-        return String.format("%s: %d combo, score %d points", music, combo, score);
+        return String.format("%s: combo %d, score %d", music, combo, score);
     }
 
 }
