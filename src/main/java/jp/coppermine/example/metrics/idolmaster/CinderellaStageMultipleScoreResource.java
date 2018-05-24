@@ -17,7 +17,7 @@ import org.eclipse.microprofile.metrics.Metadata;
 import org.eclipse.microprofile.metrics.MetricRegistry;
 import org.eclipse.microprofile.metrics.MetricType;
 
-@Path("imas-cg/scores")
+@Path("imas-cg/stage/all-result")
 @ApplicationScoped
 public class CinderellaStageMultipleScoreResource {
     

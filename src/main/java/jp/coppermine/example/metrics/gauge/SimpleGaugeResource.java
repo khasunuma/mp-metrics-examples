@@ -9,26 +9,12 @@ import org.eclipse.microprofile.metrics.annotation.Gauge;
 @Path("gauge")
 @RequestScoped
 public class SimpleGaugeResource {
-
+    
     @GET
-    @Path("long")
-    @Gauge(unit = "ms", name = "long-gauge", absolute = true)
-    public long longValue() {
+    @Path("value")
+    @Gauge(unit = "ms", name = "gauge", absolute = true)
+    public long getValue() {
         return 450;
-    }
-    
-    @GET
-    @Path("int")
-    @Gauge(unit = "cycle", name = "int-gauge", absolute = true)
-    public int intValue() {
-        return 75;
-    }
-    
-    @GET
-    @Path("double")
-    @Gauge(unit = "percent", name = "double-gauge", absolute = true)
-    public double doubleValue() {
-        return 37.5;
     }
     
 }

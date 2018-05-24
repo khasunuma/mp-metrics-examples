@@ -8,6 +8,7 @@ import java.util.Random;
 import javax.enterprise.context.ApplicationScoped;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
+import javax.ws.rs.core.Response;
 
 import org.eclipse.microprofile.metrics.annotation.Timed;
 
@@ -17,9 +18,11 @@ public class AlternateTimerResource {
     
     @GET
     @Timed(name = "alt-timer", absolute = true)
-    public void execute() {
+    public Response execute() {
         List<Integer> list = new Random().ints(100000, 1, 100000).boxed().collect(toList());
         list.sort((e1, e2) -> e1 - e2);
+        
+        return Response.ok().build();
     }
     
 }

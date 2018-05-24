@@ -9,6 +9,7 @@ import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
+import javax.ws.rs.core.Response;
 
 import org.eclipse.microprofile.metrics.Timer;
 import org.eclipse.microprofile.metrics.annotation.Metric;
@@ -22,13 +23,15 @@ public class SimpleTimerResource {
     private Timer timer;
     
     @GET
-    public void execute() {
+    public Response execute() {
         Timer.Context context = timer.time();
         
         List<Integer> list = new Random().ints(100000, 1, 100000).boxed().collect(toList());
         list.sort((e1, e2) -> e1 - e2);
         
         context.close();
+        
+        return Response.ok().build();
     }
     
 }

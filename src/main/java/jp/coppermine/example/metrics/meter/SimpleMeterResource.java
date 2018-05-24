@@ -4,6 +4,7 @@ import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
+import javax.ws.rs.core.Response;
 
 import org.eclipse.microprofile.metrics.Meter;
 import org.eclipse.microprofile.metrics.annotation.Metric;
@@ -18,9 +19,9 @@ public class SimpleMeterResource {
     
     @GET
     @Path("ping")
-    public String ping() {
+    public Response ping() {
         meter.mark();
-        return "pong";
+        return Response.ok().build();
     }
     
 }

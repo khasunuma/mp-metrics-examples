@@ -15,7 +15,7 @@ import javax.ws.rs.Path;
 import org.eclipse.microprofile.metrics.Histogram;
 import org.eclipse.microprofile.metrics.annotation.Metric;
 
-@Path("imas-cg/score")
+@Path("imas-cg/stage/result")
 @ApplicationScoped
 public class CinderellaStageScoreResource {
     

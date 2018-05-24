@@ -1,4 +1,4 @@
-package jp.coppermine.example.metrics.hazelcast;
+package jp.coppermine.example.metrics.payara;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
@@ -9,16 +9,16 @@ import org.eclipse.microprofile.metrics.annotation.Gauge;
 
 import com.hazelcast.core.HazelcastInstance;
 
-@Path("hazelcast")
+@Path("payara")
 @ApplicationScoped
-public class HazelcastStatusResource {
+public class DataGridStatusResource {
     
     @Inject
     private HazelcastInstance hazelcastInstance;
     
     @GET
-    @Path("members")
-    @Gauge(unit = "unit", name = "hazelcast-cluster-members", absolute = true)
+    @Path("cluster/members")
+    @Gauge(unit = "unit", name = "payara.data-grid.members", absolute = true)
     public int count() {
         return hazelcastInstance.getCluster().getMembers().size();
     }

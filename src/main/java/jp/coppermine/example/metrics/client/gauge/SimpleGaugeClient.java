@@ -1,4 +1,4 @@
-package jp.coppermine.example.metrics.client.counter;
+package jp.coppermine.example.metrics.client.gauge;
 
 import static javax.ws.rs.core.MediaType.APPLICATION_JSON;
 import static jp.coppermine.example.metrics.client.Endpoint.APPLICATION_METRICS;
@@ -10,19 +10,19 @@ import javax.ws.rs.Path;
 import javax.ws.rs.client.Client;
 import javax.ws.rs.client.ClientBuilder;
 
-@Path("counter")
+@Path("gauge")
 @RequestScoped
-public class SimpleCounterClient {
+public class SimpleGaugeClient {
 
     @GET
     public String getValue() {
         Client client = ClientBuilder.newClient();
         
-        client.target(APPLICATION_PATH).path("counter").path("inc").request().get();
+        client.target(APPLICATION_PATH).path("gauge").path("value").request().get();
         
-        JsonResponse response = client.target(APPLICATION_METRICS).path("counter").request(APPLICATION_JSON).get(JsonResponse.class);
+        JsonResponse responseLong = client.target(APPLICATION_METRICS).path("gauge").request(APPLICATION_JSON).get(JsonResponse.class);
         
-        return String.format("[METRICS] counter: %d", response.getValue());
+        return String.format("[METRICS] gauge: %d", responseLong.getGauge());
     }
-    
+
 }

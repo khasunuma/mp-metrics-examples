@@ -4,6 +4,7 @@ import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
+import javax.ws.rs.core.Response;
 
 import org.eclipse.microprofile.metrics.Counter;
 import org.eclipse.microprofile.metrics.annotation.Metric;
@@ -18,14 +19,16 @@ public class SimpleCounterResource {
     
     @GET
     @Path("inc")
-    public void increment() {
+    public Response increment() {
         counter.inc();
+        return Response.ok().build();
     }
     
     @GET
     @Path("dec")
-    public void decrement() {
+    public Response decrement() {
         counter.dec();
+        return Response.ok().build();
     }
     
 }
