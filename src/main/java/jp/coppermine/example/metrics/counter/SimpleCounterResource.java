@@ -10,15 +10,15 @@ import org.eclipse.microprofile.metrics.Counter;
 import org.eclipse.microprofile.metrics.annotation.Metric;
 
 /**
- * An simple example to use {@link Counter} metrics.
+ * An simple example to use {@link Counter} metric.
  */
 @Path("counter")
 @ApplicationScoped
 public class SimpleCounterResource {
     
     /**
-     * {@link Counter} metrics put to application registry 
-     * named "counter" strictly.
+     * {@link Counter} metric put to application registry 
+     * named "counter".
      * 
      * <p>It's enabled to inject {@code Counter}, {@code Meter}, 
      * {@code Histogram} and {@code Timer} metrics to field with 

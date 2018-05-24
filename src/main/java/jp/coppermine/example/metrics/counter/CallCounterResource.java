@@ -9,7 +9,7 @@ import org.eclipse.microprofile.metrics.Counter;
 import org.eclipse.microprofile.metrics.annotation.Counted;
 
 /**
- * Another example to use {@link Counter} metrics.
+ * Another example to use {@link Counter} metric.
  * 
  * <p>It works same as {@link SimpleCounterResource} using {@code Counted} 
  * annotation on method.</p>
@@ -21,13 +21,13 @@ import org.eclipse.microprofile.metrics.annotation.Counted;
 public class CallCounterResource {
     
     /**
-     * Event to increment the counter metrics named "called" strictly and 
-     * register it at first time.
+     * Event to increment the counter metric named "called" and register it 
+     * at first time.
      * 
-     * <p>In {@code @metrics}, using {@code monotonic} to switch increment 
+     * <p>In {@code @Counted}, using {@code monotonic} to switch increment 
      * or decrement the counter when the method is called. If the value is 
      * {@code true}, it means to increment. Otherwise, to decrement.
-     * in default, it is {@code false}. Other parameteres are same in case
+     * in default, it is {@code false}. Other parameters are same in case
      * of {@link SimpleCounterResource}</p>
      * 
      * @return {@link Response} object means HTTP 200
