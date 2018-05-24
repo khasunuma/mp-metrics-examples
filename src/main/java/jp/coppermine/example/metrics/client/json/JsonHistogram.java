@@ -4,6 +4,13 @@ import java.io.Serializable;
 
 import javax.json.bind.annotation.JsonbProperty;
 
+/**
+ * Map the values of Histogram metrics using JSON Binding.
+ * 
+ * @see org.eclipse.microprofile.metrics.Histogram
+ * @see JsonMeter
+ * @see JsonTimer
+ */
 public class JsonHistogram implements Serializable {
         
     /**

@@ -4,6 +4,13 @@ import java.io.Serializable;
 
 import javax.json.bind.annotation.JsonbProperty;
 
+/**
+ * Map the values of Timer metrics using JSON Binding.
+ * 
+ * @see org.eclipse.microprofile.metrics.Timer
+ * @see JsonMeter
+ * @see JsonHistogram
+ */
 public class JsonTimer implements Serializable {
 
     /**

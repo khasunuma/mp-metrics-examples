@@ -4,6 +4,13 @@ import java.io.Serializable;
 
 import javax.json.bind.annotation.JsonbProperty;
 
+/**
+ * Map the values of Meter metrics using JSON Binding.
+ * 
+ * @see org.eclipse.microprofile.metrics.Meter
+ * @see JsonHistogram
+ * @see JsonTimer
+ */
 public class JsonMeter implements Serializable {
 
     /**
