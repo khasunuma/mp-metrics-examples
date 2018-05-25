@@ -39,7 +39,7 @@ public class CinderellaStageScoreClient {
     @Path("{music}")
     public String get(@PathParam("music") @DefaultValue("play") String music) {
         Jsonb jsonb = JsonbBuilder.create();
-        List<JsonRequest> request = jsonb.fromJson(getClass().getResourceAsStream("/imas-cg-score.json"), JsonRequest.ListType);
+        List<JsonRequest> request = jsonb.fromJson(getClass().getResourceAsStream("/imas-cg-score-mixed.json"), JsonRequest.ListType);
         
         Client client = ClientBuilder.newClient();
         client.target(APPLICATION_PATH).path("imas-cg/stage/all-result/import").request().post(Entity.entity(request, APPLICATION_JSON));
