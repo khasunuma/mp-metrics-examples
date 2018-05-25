@@ -1,2 +1,2 @@
-# metrics-as-toys
+# mp-metrics-examples
 Examples using MicroProfile Metrics API
